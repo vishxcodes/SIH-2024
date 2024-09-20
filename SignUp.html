@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Create an account</title>
+</head>
+<body>
+    <nav></nav>
+    <div class="wrapper">
+        <form action="">
+            <h2>Create Account</h2>
+            <p>Enter your details to create an account:</p>
+            <div class="input-box">
+                <div>Enter first name</div>
+                <input type="text" placeholder="First Name" required>
+            </div>
+            <div class="input-box">
+                <div>Enter last name</div>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="input-box">
+                <div>Enter Employee ID</div>
+                <input type="text" placeholder="Employee ID" required>
+            </div>
+            <div class="input-box">
+                <div class="dropdown">
+                    Select Department
+                    <div class="dropdown-content">
+                        <a href="#">HR</a>
+                        <a href="#">Finance</a>
+                        <a href="#">IT</a>
+                        <a href="#">Marketing</a>
+                        <a href="#">Operations</a>
+                        <a href="#">Sales</a>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box">
+                <div>Enter contact number</div>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" placeholder="0123456789" required >
+            </div>
+            <div class="input-box">
+                <div>Enter DOB</div>
+                <input type="date" placeholder="Contact" required>
+            </div>
+            <div class="submit">
+                <button type="submit" class="btn">Next</button>
+            </div>
+            <div class="login">
+                <p>Already have an account? <a href="SignIn.html">Login</a></p>
+            </div>
+            <p class="note">Note- An OTP will be sent on your SMS to verify your mobile number.</p>
+        </form>
+    </div>
+</body>
+</html>
