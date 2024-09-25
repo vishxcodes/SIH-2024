@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagarvikas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar" style="background-color: black; color: white;">
+            <div class="nav">
+                <div class="logo">
+                    <img src="NagarVikas.png" alt="">
+                </div>
+                <ul>
+                    <li>Home</li>
+
+                    
+                    <li class="project">Project
+                        <ul class="project-content">
+                            <ol><a href="#">Overlapping Projects</a></ol>
+                            <ol><a href="#">Project Planning</a></ol>
+                            <ol><a href="#">Task Management</a></ol>
+                        </ul>
+                    </li>
+                    
+                    
+
+
+
+                    <li>Contact</li>
+                    <li>Help</li>
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="profile">
+                                <g fill="#ffffff" class="color000000 svgShape">
+                                    <circle cx="16" cy="6.96" r="6" fill="#ffffff" class="color000000 svgShape">
+                                    </circle>
+                                    <path
+                                        d="M30.86,26.84a15.07,15.07,0,0,0-4.11-7.47A12.47,12.47,0,0,0,25.13,18,15,15,0,0,0,16,15,15.24,15.24,0,0,0,5.24,19.37a15.07,15.07,0,0,0-4.11,7.47,3.42,3.42,0,0,0,.69,2.88A3.52,3.52,0,0,0,4.58,31H27.42a3.52,3.52,0,0,0,2.75-1.32A3.42,3.42,0,0,0,30.86,26.84Z"
+                                        fill="#ffffff" class="color000000 svgShape"></path>
+                                </g>
+                            </svg></a>
+
+                        <div class="sidenav-section"></div>
+
+                        <br>
+                        <a href="#aboutSection">About</a> <!-- Link to the About section -->
+                        <a href="#">Services</a>
+
+                        <div class="dropdown">
+                            <a class="dropdown-button">Department</a>
+                            <div class="dropdown-content">
+                                <a href="#">Ministry of Road Transport & Highways</a>
+                                <a href="#">Water Resources Department</a>
+                                <a href="#">Ministry of Power</a>
+                            </div>
+                        </div>
+
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Schedule</a>
+                        <a href="SignIn.html">Login</a>
+
+                    </div>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+
+            // Scroll to the About section when clicked
+            document.querySelector('.sidenav a[href="#aboutSection"]').addEventListener('click', function (e) {
+                e.preventDefault();
+                document.getElementById('aboutSection').scrollIntoView({ behavior: 'smooth' });
+                closeNav();
+            });
+        </script>
+
+        <div class="first">
+            <img src="https://cdn.pixabay.com/photo/2016/11/18/22/31/architecture-1837176_640.jpg" alt="">
+            <div class="first-one">
+                <div>Welcome to NagarVikas</div>
+                <div>Empower urban governance with seamless interdepartmental cooperation. Our platform bridges the gaps
+                    between various agencies, facilitating efficient data exchange, collaborative project management,
+                    and streamlined scheduling. By integrating resources, coordinating tasks, and fostering dialogue, we
+                    drive progress and enhance the effectiveness of urban development projects. Join us in building a
+                    more connected and efficient city.</div>
+            </div>
+        </div>
+
+        <!-- <div class="slider" style="--width:390px; --height:300px; --quantity:10; margin-top: 200px;">
+            <div class="list">
+                <div class="item" style="--position:1"><img src="IMG_20240918_204131.jpg" alt=""></div>
+                <div class="item" style="--position:2"><img src="IMG_20240918_204144.jpg" alt=""></div>
+                <div class="item" style="--position:3"><img src="IMG_20240918_204155.jpg" alt=""></div>
+                <div class="item" style="--position:4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxl7FkI0-gS1vZ0iYF6qfm91K0meXI8-c2yw&s" alt=""></div>
+                <div class="item" style="--position:5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyG4-OoVBTn_U6CgKEflcWpbHaHSH8Gl2tJw&s" alt=""></div>
+            </div>
+        </div> -->
+
+        <!-- About Section -->
+        <div id="aboutSection" class="About">
+            <h2>About Us</h2>
+            <p>The aim of developing this digital platform is to address the multifaceted challenges of urban governance
+                in India, where a plethora of authorities and implementing agencies often results in inefficiencies and
+                delays. The current landscape is plagued by underutilization of resources, miscoordination, and
+                overlapping projects, which can hinder progress and inflate costs. For example, a road built by one
+                agency may be compromised by utility installations carried out later by another, leading to unnecessary
+                damage and repair work. To mitigate such issues, our platform will provide a comprehensive solution for
+                interdepartmental cooperation.
+
+                Our digital platform will facilitate the seamless exchange of data and resources between various
+                agencies, including technical expertise, machinery, and technology. It will offer a centralized system
+                for listing ongoing and upcoming projects, enabling agencies to access and share relevant information
+                efficiently. Scheduling tools will be integrated to coordinate tasks, reports, and work distribution for
+                projects that involve multiple departments, reducing delays and improving overall project management.
+
+                Additionally, the platform will help identify projects across different departments that share the same
+                site. It will provide tools for organizing meetings, unified project phasing, and collaborative planning
+                to streamline execution and minimize costs. Training and capacity-building exercises, workshops, and
+                seminars will also be available to enhance the skills of all stakeholders involved.
+
+                A key feature of the platform will be its discussion forum, which will include sections for
+                intra-departmental, inter-departmental, and public discussions. This will foster communication and
+                collaboration among various groups, ensuring that all voices are heard and that solutions are developed
+                collectively.
+
+                In summary, our digital platform aims to revolutionize urban governance by improving coordination,
+                resource utilization, and project management, ultimately leading to more efficient and effective urban
+                development.</p>
+        </div>
+
+
+        <div class="section"></div>
+
+        <div class="footer">
+            <div class="footer-items">
+                <h2>Contact Us</h2>
+                <p>Phone: 123-456-7890</p>
+                <p>Email: info@nagarvikas.com</p>
+                <p>Address: 1234 Urban Street, Cityville, 56789</p>
+                <h5>Working Hours:</h5>
+                <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                <p>Sat-Sun: Closed</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
