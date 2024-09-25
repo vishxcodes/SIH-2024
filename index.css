@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .main {
+            width: 100%;
+            height: 200vh;
+            position: relative;
+        }
+
+        .navbar {
+            border: 2px solid black;
+            width: 100%;
+            height: 10vh;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0; /* Stick the navbar to the top */
+            z-index: 1000; /* Ensure the navbar stays on top of other elements */
+            font-size: small;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .nav li {
+            border: 1px solid rgb(0, 0, 0);
+            padding: 13px;
+            border-radius: 20px;
+            gap: 80px;
+        }
+
+        .nav li:hover{
+            color: black ;
+            background-color: whitesmoke;
+        }
+        
+        .logo img {
+            width: 210px;
+            height: 40px;
+        }
+
+        ul {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+            margin: 0;
+            padding-right: 5px;
+            align-items: center;
+            justify-content: end;
+            font-size: larger;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+
+
+
+        .project-content {
+            width: 20%;
+            background: #fff;
+            position: absolute;
+            z-index: 999;
+            display: none;
+            overflow-y: scroll;
+            margin-top: 12px;
+            border-radius: 10px;
+        }
+        
+        .project:hover .project-content {
+            display: block;
+        }
+        
+        .project-content ol {
+            list-style: none;
+        }
+        
+        .project-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            background: #fff;
+            color: #000;
+        }
+        
+        .project:hover {
+            background: #403232;
+        }
+        
+        /* This will ensure only the hovered <a> changes color */
+        .project-content a:hover {
+            background-color: #403232;
+            color: #fff; /* For better readability */
+        }
+        
+        /* Ensures non-hovered links keep their original background */
+        .project-content a:not(:hover) {
+            background: #fff;
+        }
+        
+        
+        
+
+        .first {
+            position: relative;
+            width: 100%;
+            padding-top: 1px;
+        }
+
+        .first img {
+            width: 100%;
+            height: 70vh;
+            opacity: 1;
+            filter: brightness(30%);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .first-one {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .first-one div {
+            margin-bottom: 20px;
+        }
+
+        .first-one div:first-child {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .first-one div:nth-child(2) {
+            font-size: 20px;
+            max-width: 800px;
+            line-height: 1.6;
+            margin: auto;
+        }
+
+        /* Slider container */
+        .slider {
+            width: 100%;
+            overflow: hidden; /* Hide overflow */
+            height: var(--height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* List container for slider items */
+        .slider .list {
+            display: flex;
+            width: calc(var(--width) * var(--quantity)); /* Set the width dynamically */
+            animation: scroll 20s linear infinite; /* Continuous scroll */
+        }
+
+        /* Slider items */
+        .slider .list .item {
+            width: var(--width);
+            height: var(--height);
+            flex-shrink: 0;
+        }
+
+        .slider .list .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Keyframe animation for seamless scrolling */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-1 * var(--width) * var(--quantity)));
+            }
+        }
+
+        /* Pause the slideshow on hover */
+        .slider:hover .list {
+            animation-play-state: paused;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0; /* Change from left: 0 to right: 0 */
+            left: auto; /* Ensure left is not affecting the position */
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            
+        }
+
+        .sidenav svg{
+               width: 100px;
+               height: 100px;
+               margin-left: 50px;
+        }
+
+        .sidenav-section{
+            border: 2px solid #4a4747;
+            width: 70%;
+            margin-left: 45px;
+                       
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-size: medium;
+            /* border:1px solid #67c200;
+            border-radius: 5px;  */ 
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+
+        /* Styling for the dropdown button */
+        .dropdown {
+            width: 200px;
+            position: relative;
+            display: inline-block; /* Keeps it inline */
+            font-size: small;
+        }
+
+        /* Styling for the button */
+        .dropdown-button {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            border: none; /* Remove border */
+            text-align: left; /* Align text to the left */
+            color: black; /* Button text color */
+            background-color: #111;
+            color: #818181;
+        }
+ 
+        /* Container for the scrollable dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            max-height: 150px; /* Limits the height */
+            width: 100%;
+            overflow-y: auto; /* Enables scrolling */
+            z-index: 1;
+        }
+
+        /* Show the dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Styling the links inside the dropdown content */
+        .dropdown-content a {
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #403232;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav { padding-top: 15px; }
+            .sidenav a { font-size: 18px; }
+        }
+
+        .About {
+            border: 2px solid black;
+            width: 100%;
+            height: 50vh;
+            background-color: rgb(26, 17, 17);
+            color: white;
+            padding: 16px;
+            margin-top: 200px;
+        }
+
+        .About p {
+
+            font-size: medium;
+        }
+
+        .section {
+            border: 3px solid grey;
+            width: 100%;
+        }
+
+        .footer {
+            border: 1px solid black;
+            background-color: rgb(26, 17, 17);
+            height: 60vh;
+            width: 100%;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .footer-items h2 {
+            margin-bottom: 20px;
+        }
+
+        .footer-items p {
+            margin-bottom: 20px;
+        }
+
+        .footer-items p:nth-of-type(2),
+        .footer-items p:nth-of-type(3) {
+            margin-bottom: 10px;
+        }
+
+        .footer-items h5 {
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width:789px) {
+            ul{
+                gap: 15px;
+            }
+            
+            .logo img {
+                width: 80px;
+                height: 20px;
+                margin-top: 12px;
+            }
+
+            .navbar{
+                width: 100%;
+            }
+
+
+        }
+
+        @media only screen and (max-width:589px){
+             .first img{
+                width: 100%;
+                height: 90vh;
+             }
+
+        }
+
+        @media only screen and (max-width:1300px){
+              .About{
+                height: 60vh;
+                width: 100%;
+                margin-top:239px;
+              }
+        }
+
+        @media only screen and (max-width:1000px){
+              .About{
+                height: 70vh;
+                width: 100%
+              }
+        }
+
+        @media only screen and (max-width:900px){
+              .About{
+                height: 80vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:680px){
+              .About{
+                height: 90vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:600px){
+              .About{
+                height: 100vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:540px){
+              .About{
+                height: 120vh;
+                width: 100%; 
+              }
+        }
+        @media only screen and (max-width:460px){
+              .About{
+                height: 140vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:400px){
+              .About{
+                height: 160vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:360px){
+              .About{
+                height: 180vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:320px){
+              .About{
+                height: 200vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:300px){
+              .About{
+                height: 220vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:280px){
+              .About{
+                height: 240vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:240px){
+              .About{
+                height: 260vh;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:826px){
+              .About{
+                margin-top:207px;
+                width: 100%;
+              }
+        }
+        @media only screen and (max-width:700px){
+              .About{
+                margin-top:175px;
+              }
+        }
+        @media only screen and (max-width:666px){
+              .About{
+                margin-top:68px;
+              }
+        }
+        @media only screen and (max-width:596px){
+              .About{
+                margin-top:244px;
+              }
+        }
